@@ -99,8 +99,6 @@ namespace NGA_WATCH
 
                     string json = stream.ReadToEnd();
 
-                    FilePutContent("c.json", json);
-
                     Posts data = Newtonsoft.Json.JsonConvert.DeserializeObject<Posts>(json);
 
                     string error = data.data.__T[0].error;
